@@ -2,7 +2,7 @@ func TestConcurrentWithdraw(t *testing.T) {
 	ctx := context.Background()
 	walletID := uuid.New()
 
-	// создать кошелёк с балансом 100000
+
 	_, err := db.Exec(ctx,
 		`INSERT INTO wallets (id, balance) VALUES ($1, $2)`,
 		walletID, 100000,
