@@ -13,7 +13,7 @@ type Config struct {
 }
 
 func Load() (*Config, error) {
-	// загружаем config.env
+	
 	if err := godotenv.Load("config.env"); err != nil {
 		return nil, err
 	}
