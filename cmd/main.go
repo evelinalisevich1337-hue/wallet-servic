@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	// читаем config.env
+	
 	_ = godotenv.Load("config.env")
 
 	dsn := fmt.Sprintf(
@@ -32,7 +32,7 @@ func main() {
 
 	fmt.Println("Connected to Postgres")
 
-	// простой HTTP сервер, чтобы контейнер не завершался
+	
 	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "OK")
 	})
